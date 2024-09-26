@@ -8,9 +8,12 @@ import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 
+//step 3
+import useDarkMode from "./hooks/useDarkMode"; //Import the useDarkMode hook
+
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode(false); //Replace the useState hook with the custom made useDarkMode hook.
 
   useEffect(() => {
     axios
